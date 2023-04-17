@@ -2,130 +2,80 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <title>Cadastro de Animal de Rua</title>
+  <title>Tutor Amigo</title>
   <style>
     body {
+      background-color: #f5e5cb;
+      /* Cor de fundo bege */
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
       margin: 0;
       padding: 0;
     }
 
-    #header {
-      background-image: url("https://cdn.pixabay.com/photo/2017/09/07/13/28/dog-2723648_960_720.jpg"), url("https://cdn.pixabay.com/photo/2017/09/07/13/28/cat-2723649_960_720.jpg");
-      background-repeat: no-repeat;
-      background-size: 50%;
-      background-position: left top, right top;
-      height: 200px;
-      position: relative;
-    }
-
-    #container {
-      max-width: 800px;
+    .container {
+      max-width: 1200px;
       margin: 0 auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 5px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-      position: relative;
-      top: -100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
-    h1 {
-      color: #333;
+    .sidebar {
+      background-color: #5c9179;
+      /* Cor de fundo da barra de navegação verde escuro */
+      color: #fff;
+      /* Cor do texto na barra de navegação branco */
+      width: 200px;
+      padding: 20px;
+    }
+
+    .sidebar a {
+      display: block;
+      margin-bottom: 10px;
+      color: #fff;
+      /* Cor dos links na barra de navegação branco */
+      text-decoration: none;
+    }
+
+    .sidebar a:hover {
+      color: #e2e2e2;
+      /* Cor dos links ao passar o mouse na barra de navegação cinza claro */
+    }
+
+    .content {
+      padding: 20px;
       text-align: center;
     }
 
-    form {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+    .content h1 {
+      color: #3d6d55;
+      /* Cor do título verde escuro */
     }
 
-    label {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
-
-    input[type="text"],
-    select,
-    textarea,
-    input[type="number"],
-    input[type="file"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 3px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    select {
-      -webkit-appearance: none;
-      -moz-appearance: none;
-      appearance: none;
-      background-color: #fff;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%235c5c5c' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-    }
-
-    textarea {
-      resize: vertical;
-    }
-
-    input[type="radio"] {
-      margin-right: 5px;
-    }
-
-    input[type="submit"] {
-      background-color: #333;
-      color: #fff;
-      border: none;
-      border-radius: 3px;
-      padding: 10px 20px;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #555;
+    .content img {
+      max-width: 400px;
+      margin-top: 20px;
     }
   </style>
 </head>
 
 <body>
-  <div id="header"></div>
-  <div id="container">
-    <h1>Cadastro de Animal de Rua</h1>
-    <form>
-      <label for="nome">Nome:</label>
-      <input type="text" id="nome" name="nome">
-      <label for="especie">Espécie:</label>
-      <select id="especie" name="especie">
-        <option value="cachorro">Cachorro</option>
-        <option value="gato">Gato</option>
-        <option value="outros">Outros</option>
-      </select>
-
-      <label>Gênero:</label>
-      <input type="radio" id="sexo_macho" name="sexo" value="macho">
-      <label for="sexo_macho">Macho</label>
-      <input type="radio" id="sexo_femea" name="sexo" value="femea">
-      <label for="sexo_femea">Fêmea</label>
-
-      <label for="idade">Idade:</label>
-      <input type="number" id="idade" name="idade">
-
-      <label for="descricao">Descrição:</label>
-      <textarea id="descricao" name="descricao"></textarea>
-
-      <label for="foto">Foto:</label>
-      <input type="file" id="foto" name="foto">
-
-      <input type="submit" value="Enviar">
-    </form>
+  <div class="sidebar">
+    <h2>Menu</h2>
+    <a href="#">Página Inicial</a>
+    <a href="#">Cadastrar</a>
+    <a href="#">Animais Cadastrados</a>
+    <a href="#">Adotar</a>
+    <a href="#">Sobre</a>
+  </div>
+  <div class="container">
+    <div class="content">
+      <h1>Bem-vindo(a) ao Portal Tutor Amigo</h1>
+      <img src="projeto_cad_animal\app_cad_animal\templates\Animais-abandonados.jpg" alt="Imagem de animais de rua">
+      <p>Aqui você pode encontrar informações sobre animais de rua e como ajudá-los. Cadastre-se para contribuir na
+        adoção e cuidado desses animais.</p>
+    </div>
   </div>
 </body>
 
