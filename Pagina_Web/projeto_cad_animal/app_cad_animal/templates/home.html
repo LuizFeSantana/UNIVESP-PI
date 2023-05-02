@@ -2,81 +2,90 @@
 <html>
 
 <head>
-  <title>Tutor Amigo</title>
-  <style>
-    body {
-      background-color: #f5e5cb;
-      /* Cor de fundo bege */
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .sidebar {
-      background-color: #5c9179;
-      /* Cor de fundo da barra de navegação verde escuro */
-      color: #fff;
-      /* Cor do texto na barra de navegação branco */
-      width: 600px;
-      padding: 20px;
-    }
-
-    .sidebar a {
-      display: block;
-      margin-bottom: 10px;
-      color: #fff;
-      /* Cor dos links na barra de navegação branco */
-      text-decoration: none;
-    }
-
-    .sidebar a:hover {
-      color: #e2e2e2;
-      /* Cor dos links ao passar o mouse na barra de navegação cinza claro */
-    }
-
-    .content {
-      padding: 20px;
-      text-align: center;
-    }
-
-    .content h1 {
-      color: #3d6d55;
-      /* Cor do título verde escuro */
-    }
-
-    .content img {
-      max-width: 400px;
-      margin-top: 20px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/> 
+    <title>Tutor Amigo - Página Inicial</title>
 </head>
 
+<style>
+    body {
+            background-color: #f5e5cb; /* Cor de fundo bege */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25vh;
+        }
+        .rectangle {
+            background-color: #127596;
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            top: 10;
+            right: 0;
+        }
+        .rectangle a {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px 0; /* Adiciona espaço vertical de 10px e remove espaço horizontal */
+            color: #fff; /* Cor dos links na barra de navegação branco */
+            text-decoration: none;
+        }
+        .rectangle a:hover {
+            color: #e2e2e2; /* Cor dos links ao passar o mouse na barra de navegação cinza claro */
+        }
+        .content {
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+        .content h1 {
+            color: #3d6d55; /* Cor do título verde escuro */
+            margin-top: 0;
+        }
+        .content img {
+            width: "10";
+            height: "10";
+        }
+        {<img src=“cat.png”>
+         width=“40”
+         height=“30”
+        }
+        
+</style>
+
 <body>
-  <div class="sidebar">
-    <h2>Tutor Amigo</h2>
-    <a href="#">Página Inicial</a>
-    <a href="#">Cadastrar</a>
-    <a href="#">Animais Cadastrados</a>
-    <a href="#">Adotar</a>
-    <a href="#">Sobre</a>
-  </div>
-  <div class="container">
-    <div class="content">
-      <h1>Bem-vindo(a) ao Portal Tutor Amigo</h1>
-      <img src="projeto_cad_animal\app_cad_animal\templates\Animais-abandonados.jpg" alt="Imagem de animais de rua">
-      <p>Aqui você pode encontrar informações sobre animais de rua e como ajudá-los. Cadastre-se para contribuir na
-        adoção e cuidado desses animais.</p>
+    <div id="sidebar" class="rectangle">
+        <ul>
+        <a href="#">Página Inicial</a>
+        <a href="#">Cadastrar</a>
+        <a href="#">Animais Cadastrados</a>
+        <a href="#">Adotar</a>
+        <a href="#">Sobre</a>
+    </ul>
+</div>
+    <div class="container">
+        <div class="content">
+            <h1>Bem-vindo(a) ao Tutor Amigo</h1>
+            <img src="Imagens/cat.png" alt="Gato">
+            <img src="Imagens/patas_trilhas.png" alt="patas">
+            <p>Aqui você pode encontrar informações sobre animais de rua e como ajudá-los</p>. 
+            </p>Cadastre-se para contribuir na adoção e cuidado desses animais.</p>
+        </div>
     </div>
-  </div>
+
 </body>
 
 </html>
