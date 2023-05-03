@@ -1,0 +1,49 @@
+body {
+            background-color: #f5e5cb; /* Cor de fundo bege */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+.container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 25vh;
+        }
+.rectangle {
+            background-color: #127596;
+            width: 200px;
+            height: 100%;
+            position: fixed;
+            top: 10;
+            right: 0;
+        }
+.rectangle a {
+            display: block;
+            margin-bottom: 10px;
+            padding: 5px 0; /* Adiciona espaço vertical de 10px e remove espaço horizontal */
+            color: #fff; /* Cor dos links na barra de navegação branco */
+            text-decoration: none;
+        }
+.rectangle a:hover {
+            color: #e2e2e2; /* Cor dos links ao passar o mouse na barra de navegação cinza claro */
+        }
+.content {
+            padding: 10px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+.content h1 {
+            color: #3d6d55; /* Cor do título verde escuro */
+            margin-top: 0;
+        }
+.content img {
+            width: "30";
+            height: "30";
+        }
