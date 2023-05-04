@@ -1,49 +1,62 @@
-body {
-            background-color: #f5e5cb; /* Cor de fundo bege */
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-.container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 90vh;
-        }
-.rectangle {
-            background-color: #127596;
-            width: 190px;
-            height: 30%;
-            position: fixed;
-            top: 20%;
-            right: 10;
-        }
-.rectangle a {
-            display: block;
-            margin-bottom: 10px;
-            padding: 5px 0; /* Adiciona espaço vertical de 10px e remove espaço horizontal */
-            color: #fff; /* Cor dos links na barra de navegação branco */
-            text-decoration: none;
-        }
-.rectangle a:hover {
-            color: #e2e2e2; /* Cor dos links ao passar o mouse na barra de navegação cinza claro */
-        }
-.content {
-            padding: 10px;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-        }
-.content h1 {
-            color: #3d6d55; /* Cor do título verde escuro */
-            margin-top: 0;
-        }
-.content img {
-    max-width: 15%;
-    height: auto;
-        }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    background: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    clip-path: circle(50% at bottom right);
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    position: relative;
+    max-width: 150px;
+}
+
+header .Navigation ul {
+    position: relative;
+    display: flex;
+}
+
+header .Navigation li {
+    list-style: none;
+}
+
+header .Navigation li a {
+    color: white;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 19px;
+    margin-left: 100px;
+
+}
