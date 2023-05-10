@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 section {
@@ -9,7 +12,10 @@ section {
     width: 100%;
     min-height: 100vh;
     padding: 100px;
-    background: #121212;
+    background-image: url(../images/bg_animals.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -39,7 +45,8 @@ header {
 
 header .logo {
     position: fixed;
-    max-width: 120px;
+    max-width: 150px;
+    top: 10px;
 }
 
 header .Navigation ul {
@@ -47,32 +54,44 @@ header .Navigation ul {
     display: flex;
 }
 
+header .Navigation {
+    float: right;
+}
+
 header .Navigation li {
-    list-style: none;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header .Navigation li:first-child {
+    margin-left: 0;
 }
 
 header .Navigation li a {
-    color: white;
     display: inline-block;
-    text-decoration: none;
+    color: #fff;
     font-weight: 500;
-    font-size: 17px;
-    margin-left: 140px;
-    margin-top: 5%;
+    text-decoration: none;
+    font-size: 19px;
+    margin-left: 10px;
 }
-.content{
+
+.content {
     position: relative;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.content .text{
+
+.content .text {
     position: relative;
     max-width: 600px;
     margin-right: 20px;
+    white-space: nowrap;
 }
-.content .text h2{
+
+.content .text h2 {
     color: #fff;
     font-size: 2.5em;
     margin-bottom: 90px;
@@ -80,11 +99,12 @@ header .Navigation li a {
     font-weight: 600;
 }
 
-.content .text p{
+.content .text p {
     color: #fff;
     letter-spacing: 1px;
 }
-.content .text a{
+
+.content .text a {
     display: inline-block;
     margin-top: 50px;
     padding: 10px 25px;
@@ -96,10 +116,12 @@ header .Navigation li a {
     border-radius: 30px;
     transition: 0.3s ease-in-out;
 }
-.content .text a:hover{
+
+.content .text a:hover {
     transform: translateY(-10px);
 }
-.icons{
+
+.icons {
     position: absolute;
     bottom: 40px;
     left: 100px;
@@ -107,10 +129,12 @@ header .Navigation li a {
     justify-content: center;
     align-items: center;
 }
-.icons li{
+
+.icons li {
     list-style: none;
 }
-.icons li a{
+
+.icons li a {
     display: inline-block;
     margin-left: 45px;
     background: #222;
@@ -120,33 +144,41 @@ header .Navigation li a {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    transition:  0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
-.icons li a:hover{
+
+.icons li a:hover {
     background: #e51e2a;
     transform: translateY(-10px);
 }
-.icons li a img{
+
+.icons li a img {
     filter: invert(1);
     transform: scale(0.5);
 }
-.boxImg{
+
+.boxImg {
     position: absolute;
     right: 0;
     bottom: -40px;
 }
-.boxImg img{
-    width: 400px;
+
+.boxImg img {
+    width: 300px;
 }
-.boxImg .img1{
+
+.boxImg .img1 {
     transform: rotate(0deg)
 }
-.boxImg .img2{
-    transform: rotate(5deg)
+
+.boxImg .img2 {
+    transform: rotate(0deg)
 }
-.boxImg .img3{
+
+.boxImg .img3 {
     transform: rotate(15deg)
 }
-.boxImg .img4{
+
+.boxImg .img4 {
     transform: rotate(-15deg)
 }
