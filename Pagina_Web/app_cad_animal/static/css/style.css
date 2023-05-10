@@ -12,7 +12,10 @@ section {
     width: 100%;
     min-height: 100vh;
     padding: 100px;
-    background: #121212;
+    background-image: url(../images/bg_animals.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -161,7 +164,7 @@ header .Navigation li a {
 }
 
 .boxImg img {
-    width: 400px;
+    width: 300px;
 }
 
 .boxImg .img1 {
@@ -169,7 +172,7 @@ header .Navigation li a {
 }
 
 .boxImg .img2 {
-    transform: rotate(5deg)
+    transform: rotate(0deg)
 }
 
 .boxImg .img3 {
