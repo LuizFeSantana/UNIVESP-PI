@@ -80,6 +80,7 @@ header .Navigation li a {
     max-width: 600px;
     margin-right: 20px;
     white-space: nowrap;
+    margin-top: -20px;
 }
 
 .content .text h2 {
@@ -172,4 +173,20 @@ header .Navigation li a {
 
 .boxImg .img4 {
     transform: rotate(-15deg)
+}
+
+/*Dropdown*/
+
+.dropdown ul {
+    position: relative;
+    display: none;
+}
+
+.dropdown-content ul li {
+    display: inline-block;
+}
+
+.dropdown-content ul li a {
+    text-decoration: none;
+
 }
