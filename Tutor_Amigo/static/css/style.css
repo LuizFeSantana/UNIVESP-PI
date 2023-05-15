@@ -29,7 +29,7 @@ header {
     left: 0;
     width: 100%;
     padding: 40px 100px;
-    display flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -176,17 +176,3 @@ header .Navigation li a {
 }
 
 /*Dropdown*/
-
-.dropdown ul {
-    position: relative;
-    display: none;
-}
-
-.dropdown-content ul li {
-    display: inline-block;
-}
-
-.dropdown-content ul li a {
-    text-decoration: none;
-
-}

@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'paginas.apps.PaginasConfig',
+    'cadastros.apps.CadastrosConfig',
     #'nomedoapp.apps.NomedoappConfig',
 ]
 
@@ -53,10 +54,12 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Tutor_Amigo.urls'
 
+TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [TEMPLATE_DIR],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,6 +77,7 @@ WSGI_APPLICATION = 'Tutor_Amigo.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
+
 
 DATABASES = {
     'default': {
@@ -111,6 +115,8 @@ TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
+USE_L10N = True
+
 USE_TZ = True
 
 
@@ -124,8 +130,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATICFILES_DIRS = [
-         os.path.join(BASE_DIR, 'static'),      
-]
+#STATICFILES_DIRS = [
+#         os.path.join(BASE_DIR, 'static'),      
+#]
 
-MEDIA_URL = '/img/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
