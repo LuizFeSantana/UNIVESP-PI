@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Animais(models.Model):
-    id_animal = models.IntegerField(primary_key=True)
+    id_animal = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     nome = models.CharField(max_length=50)
     especie = models.CharField(max_length=50)
     raca = models.CharField(max_length=50)
@@ -38,7 +38,7 @@ class Animais(models.Model):
 
 
 class Usuario(models.Model):
-    idUsuario = models.IntegerField(primary_key=True)
+    idUsuario = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     id_animal = models.IntegerField()
     Funcao = models.CharField(max_length=45)
     Nome = models.CharField(max_length=45)
@@ -51,7 +51,7 @@ class Usuario(models.Model):
 
 
 class Ongs(models.Model):
-    idOngs = models.IntegerField(primary_key=True)
+    idOngs = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     RazaoSocial = models.CharField(max_length=45)
     email = models.CharField(max_length=45)
     resp = models.CharField(max_length=45)
@@ -63,7 +63,7 @@ class Ongs(models.Model):
     idAnimal = models.ForeignKey('Animais', on_delete=models.CASCADE)
 
 class Servicos(models.Model):
-    idServicos = models.IntegerField(primary_key=True)
+    idServicos = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     Petshop = models.CharField(max_length=45)
     AnimaisPerdidos = models.CharField(max_length=45)
     LarTemporario = models.CharField(max_length=45)
@@ -76,7 +76,7 @@ class Servicos(models.Model):
     idClinica = models.ForeignKey('Clinica', on_delete=models.CASCADE)
 
 class Veterinario(models.Model):
-    id_Veterinario = models.IntegerField(primary_key=True)
+    id_Veterinario = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     nome = models.CharField(max_length=45)
     CRMV = models.IntegerField()
     celular = models.CharField(max_length=45)
@@ -85,7 +85,7 @@ class Veterinario(models.Model):
     idClinica = models.ForeignKey('Clinica', on_delete=models.CASCADE)
 
 class Clinica(models.Model):
-    idClinica = models.IntegerField(primary_key=True)
+    idClinica = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     razaoSocial = models.CharField(max_length=45)
     CNPJ = models.CharField(max_length=14)
     medicoResp = models.CharField(max_length=45)
@@ -98,7 +98,7 @@ class Clinica(models.Model):
     idServicos = models.ForeignKey('Servicos', on_delete=models.CASCADE)
 
 class Localizacao(models.Model):
-    idLocalizacao = models.IntegerField(primary_key=True)
+    idLocalizacao = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     nome = models.CharField(max_length=45)
     logradouro = models.CharField(max_length=45)
     numero = models.CharField(max_length=45)
@@ -112,7 +112,7 @@ class Localizacao(models.Model):
 
 
 class LarDefinitivo(models.Model):
-    idLarDefinitivo = models.IntegerField(primary_key=True)
+    idLarDefinitivo = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     Funcao = models.CharField(max_length=45)
     nome = models.CharField(max_length=45)
     cpf = models.CharField(max_length=11)
@@ -123,7 +123,7 @@ class LarDefinitivo(models.Model):
     idUsuario = models.ForeignKey('Usuario', on_delete=models.CASCADE)
 
 class LarTemporario(models.Model):
-    idLarTemporario = models.IntegerField(primary_key=True)
+    idLarTemporario = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     Tutor = models.CharField(max_length=45)
     voluntario = models.CharField(max_length=45)
     PetShop = models.CharField(max_length=45)
