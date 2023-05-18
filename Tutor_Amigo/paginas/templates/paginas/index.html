@@ -10,18 +10,18 @@
     <title>Página Inicial - Tutor Amigo</title>
 </head>
 
-<body>
+<body class="body">
     <section>
         <header>
-            <a href="#"><img src="{% static 'images/tutor_amigo_logo.png' %}" alt="logo" class="logo"></a>
+            <a href="{%url 'inicio' %}"><img src="{% static 'images/logo.png' %}" alt="logo" class="logo"></a>
             <nav class="Navigation">
                 <ul>
-                    <li><a href="{%url 'inicio' %}">Página Inicial</a></li>
-                    <li><a href="{%url 'cad_animal' %}">Animais Cadastrados</a></li>
-                    <li><a href="{%url 'parceiros' %}">Parceiros</a></li>
-                    <li><a href="{%url 'sobre' %}">Sobre</a></li>
-                    <li><a href="{%url 'cadastro' %}">Cadastre-se</a></li>
-                    <li><a href="{%url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'inicio' %}">Página Inicial</a></li>
+                    <li><a href="{% url 'cad_animal' %}">Animais Cadastrados</a></li>
+                    <li><a href="{% url 'parceiros' %}">Parceiros</a></li>
+                    <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                    <li><a href="{% url 'cadastro' %}">Cadastre-se</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
                 </ul>
             </nav>
         </header>
@@ -31,15 +31,6 @@
                 <p>Aqui você pode encontrar informações sobre animais de rua e como ajudá-los.</p>
                 <p> Cadastre-se para contribuir na adoção e cuidado desses animais.</p>
             </div>
-        </div>
-        <ul class="icons">
-            <li><a href="#"><img src="{% static 'images/facebook.png' %}" alt=""></a></li>
-            <li><a href="#"><img src="{% static 'images/twitter.png' %}" alt=""></a></li>
-            <li><a href="#"><img src="{% static 'images/instagram.png' %}" alt=""></a></li>
-        </ul>
-        <div class="boxImg">
-            <img src="{% static 'images/cat.png '%}" alt="" class="img1">
-            <img src="{% static 'images/dog.png '%}" alt="" class="img2">
         </div>
     </section>
 </body>

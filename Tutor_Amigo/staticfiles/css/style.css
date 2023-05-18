@@ -9,7 +9,7 @@
 
 body {
     background: url(../images/BG.png);
-    position: relative;
+    position:relative;
     width: 100%;
     min-height: 100vh;
     padding: 100px;
@@ -35,7 +35,7 @@ header {
 }
 
 header .logo {
-    position: relative;
+    position:relative;
     max-width: 20%;
     top: 10px;
 }
