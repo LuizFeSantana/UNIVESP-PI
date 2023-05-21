@@ -5,13 +5,13 @@ from django.db import models
 class Animais(models.Model):
     id_animal = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     nome = models.CharField(max_length=50)
-    especie = models.CharField(max_length=50)
-    raca = models.CharField(max_length=50)
+    especie = models.CharField(max_length=50, verbose_name='Espécie')
+    raca = models.CharField(max_length=50, verbose_name='Raça')
     GENERO_CHOICES = (
         ('macho', 'macho'),
         ('fêmea', 'fêmea'),
     )
-    genero = models.CharField(max_length=6, choices=GENERO_CHOICES)
+    genero = models.CharField(max_length=6, choices=GENERO_CHOICES, verbose_name='Gênero')
     idade = models.IntegerField()
     cor = models.CharField(max_length=50)
     CONDICAO_CHOICES = (
@@ -19,14 +19,14 @@ class Animais(models.Model):
         ('ferido', 'ferido'),
         ('doente', 'doente'),
     )
-    condicao_de_saude = models.CharField(max_length=9, choices=CONDICAO_CHOICES)
+    condicao_de_saude = models.CharField(max_length=9, choices=CONDICAO_CHOICES, verbose_name='Condição de saúde')
     ESTERILIZADO_CHOICES = (
         ('sim', 'sim'),
         ('não', 'não'),
     )
     esterilizado = models.CharField(max_length=3, choices=ESTERILIZADO_CHOICES)
     data_ultimo_atendimento = models.DateField()
-    endereco = models.CharField(max_length=255)
+    endereco = models.CharField(max_length=255, verbose_name='Endereço')
     latitude = models.DecimalField(max_digits=10, decimal_places=8)
     longitude = models.DecimalField(max_digits=11, decimal_places=8)
 
@@ -39,12 +39,11 @@ class Animais(models.Model):
 
 class Usuario(models.Model):
     idUsuario = models.AutoField(auto_created = True,primary_key = True,serialize = False)
-    id_animal = models.IntegerField()
-    Funcao = models.CharField(max_length=45)
+    Funcao = models.CharField(max_length=45, verbose_name='Função')
     Nome = models.CharField(max_length=45)
     cpf = models.CharField(max_length=11)
     rg = models.CharField(max_length=9)
-    endereco = models.CharField(max_length=45)
+    endereco = models.CharField(max_length=45, verbose_name='Endereço')
     email = models.CharField(max_length=45)
 
     idAnimal = models.ForeignKey('Animais', on_delete=models.CASCADE)
@@ -52,13 +51,13 @@ class Usuario(models.Model):
 
 class Ongs(models.Model):
     idOngs = models.AutoField(auto_created = True,primary_key = True,serialize = False)
-    RazaoSocial = models.CharField(max_length=45)
+    RazaoSocial = models.CharField(max_length=45, verbose_name='Razão Social')
     email = models.CharField(max_length=45)
     resp = models.CharField(max_length=45)
     telefone = models.CharField(max_length=45)
     cep = models.CharField(max_length=45)
     CNPJ = models.CharField(max_length=45)
-    endereco = models.CharField(max_length=45)
+    endereco = models.CharField(max_length=45, verbose_name='Endereço')
 
     idAnimal = models.ForeignKey('Animais', on_delete=models.CASCADE)
 

@@ -67,6 +67,10 @@ header .Navigation li a {
     margin-left: 10px;
 }
 
+header .Navigation li a:hover {
+    background-color: blue;
+}
+
 .content {
     position: relative;
     width: 100%;
@@ -128,7 +132,7 @@ form {
 /* Elemento de classe "botao" */
 .botao {
     font-size: 1.2em;
-    background: #2fec00;
+    background: green;
     border: 0;
     margin-bottom: 1em;
     color: #ffffff;
@@ -144,7 +148,7 @@ form {
 
 /* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
 .botao:hover {
-    background: #CCBBFF;
+    background: blue;
     box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
     text-shadow: none;
 }
@@ -154,67 +158,19 @@ form {
     cursor: pointer;
 }
 
-
-/*.icons {
-    position: absolute;
-    bottom: 40px;
-    left: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.icons li {
-    list-style: none;
-}
-
-.icons li a {
-    display: inline-block;
-    margin-left: 45px;
-    background: #222;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transition: 0.3s ease-in-out;
-}
-
-.icons li a:hover {
-    background: #e51e2a;
-    transform: translateY(-10px);
-}
-
-.icons li a img {
-    filter: invert(1);
-    transform: scale(0.5);
-}
-
-/*.boxImg {
-    position: absolute;
-    right: 0;
-    bottom: -40px;
-}
-
-.boxImg img {
-    width: 300px;
-}
-
-.boxImg .img1 {
-    transform: rotate(0deg)
-}
-
-.boxImg .img2 {
-    transform: rotate(0deg)
-}
-
-.boxImg .img3 {
-    transform: rotate(15deg)
-}
-
-.boxImg .img4 {
-    transform: rotate(-15deg)
-}
-
 /*Dropdown*/
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: black;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}

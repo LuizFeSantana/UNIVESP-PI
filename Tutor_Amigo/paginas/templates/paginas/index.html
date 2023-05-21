@@ -20,7 +20,15 @@
                     <li><a href="{% url 'cad_animal' %}">Animais Cadastrados</a></li>
                     <li><a href="{% url 'parceiros' %}">Parceiros</a></li>
                     <li><a href="{% url 'sobre' %}">Sobre</a></li>
-                    <li><a href="{% url 'cadastro' %}">Cadastre-se</a></li>
+                    <li class="dropdown">
+                        <a href="#">Cadastre-se</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'tutor' %}">Tutor</a></li>
+                            <li><a href="{% url 'ong' %}">Ong</a></li>
+                            <li><a href="{% url 'clinica' %}">Clínica</a></li>
+                            <li><a href="{% url 'veterinario' %}">Veterinário</a></li>
+                        </ul>
+                    </li>
                     <li><a href="{% url 'login' %}">Login</a></li>
                 </ul>
             </nav>

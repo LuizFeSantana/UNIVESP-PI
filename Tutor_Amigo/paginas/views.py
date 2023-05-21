@@ -16,5 +16,14 @@ class Cad_Animal(TemplateView):
 class Login(TemplateView):
     template_name = 'paginas/login.html'
 
-class Cadastro(TemplateView):
-    template_name = 'paginas/cadastro.html'
+class Tutor(TemplateView):
+    template_name = 'paginas/tutor.html'
+
+class Ong(TemplateView):
+    template_name = 'paginas/ong.html'
+
+class Clinica(TemplateView):
+    template_name = 'paginas/clinica.html'
+
+class Veterinario(TemplateView):
+    template_name = 'paginas/veterinario.html'
