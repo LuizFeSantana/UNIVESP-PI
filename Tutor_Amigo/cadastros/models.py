@@ -41,8 +41,8 @@ class Usuario(models.Model):
     idUsuario = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     Funcao = models.CharField(max_length=45, verbose_name='Função')
     Nome = models.CharField(max_length=45)
-    cpf = models.CharField(max_length=11)
-    rg = models.CharField(max_length=9)
+    cpf = models.CharField(max_length=11, verbose_name='CPF')
+    rg = models.CharField(max_length=9, verbose_name='RG')
     endereco = models.CharField(max_length=45, verbose_name='Endereço')
     email = models.CharField(max_length=45)
 
@@ -98,7 +98,7 @@ class Clinica(models.Model):
 
 class Localizacao(models.Model):
     idLocalizacao = models.AutoField(auto_created = True,primary_key = True,serialize = False)
-    nome = models.CharField(max_length=45)
+    Nome = models.CharField(max_length=45)
     logradouro = models.CharField(max_length=45)
     numero = models.CharField(max_length=45)
     bairro = models.CharField(max_length=45)
