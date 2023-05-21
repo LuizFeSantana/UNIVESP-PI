@@ -7,7 +7,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <title>Página Inicial - Tutor Amigo</title>
+    <title>Cadastro - Tutor Amigo</title>
+    <script>
+        function showForm(selectedForm) {
+            var veterinarioForm = document.getElementById("veterinarioForm");
+            var ongForm = document.getElementById("ongForm");
+            var tutorForm = document.getElementById("tutorForm");
+            var clinicaForm = document.getElementById("clinicaForm");
+
+            veterinarioForm.style.display = "none";
+            ongForm.style.display = "none";
+            tutorForm.style.display = "none";
+            clinicaForm.style.display = "none";
+
+            if (selectedForm === "veterinario") {
+                veterinarioForm.style.display = "block";
+            } else if (selectedForm === "ong") {
+                ongForm.style.display = "block";
+            } else if (selectedForm === "tutor") {
+                tutorForm.style.display = "block";
+            } else if (selectedForm === "clinica") {
+                clinicaForm.style.display = "block";
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -25,13 +48,75 @@
                 </ul>
             </nav>
         </header>
-        <div class="content">
-            <div class="text">
-                <h2>Cadastrar</h2>
-                <p>Aqui você pode encontrar informações sobre animais de rua e como ajudá-los.</p>
-                <p> Cadastre-se para contribuir na adoção e cuidado desses animais.</p>
+
+        <form class="form">
+            <h2>Formulário</h2>
+            <br>
+            <label for="formType">Selecione o tipo de formulário:</label>
+            <select id="formType" onchange="showForm(this.value)">
+                <option value="">Selecione</option>
+                <option value="tutor">Tutor</option>
+                <option value="ong">ONG</option>
+                <option value="clinica">Clinica</option>
+                <option value="veterinario">Veterinário</option>
+            </select>
+            <br>
+            <div id="veterinarioForm" style="display: none;">
+                <h1>Formulário Veterinário</h1>
+                <br>
+                <!-- Inclua aqui os campos específicos para o formulário de veterinário -->
+                <label for="nameVet">Nome:</label>
+                <input type="text" id="nameVet">
+                <br>
+                <label for="specialty">Especialidade:</label>
+                <input type="text" id="specialty">
+                <br>
+                <!-- Botão para enviar o formulário -->
+                <button class="botao" type="submit" onsubmit="">Concluído</button>
             </div>
-        </div>
+
+            <div id="ongForm" style="display: none;">
+                <h1>Formulário ONG</h1>
+                <br>
+                <!-- Inclua aqui os campos específicos para o formulário de ONG -->
+                <label for="nameOng">Nome:</label>
+                <input type="text" id="nameOng">
+                <br>
+                <label for="cause">Causa:</label>
+                <input type="text" id="cause">
+                <br>
+                <!-- Botão para enviar o formulário -->
+                <button class="botao" type="submit" onsubmit="">Concluído</button>
+            </div>
+
+            <div id="tutorForm" style="display: none;">
+                <h1>Formulário Tutor</h1>
+                <br>
+                <!-- Inclua aqui os campos específicos para o formulário de Tutor -->
+                <label for="nameTutor">Nome:</label>
+                <input type="text" id="nameTutor">
+                <br>
+                <label for="animal">Animal:</label>
+                <input type="text" id="animal">
+                <br>
+                <!-- Botão para enviar o formulário -->
+                <button class="botao" type="submit" onsubmit="">Concluído</button>
+            </div>
+
+            <div id="clinicaForm" style="display: none;">
+                <h1>Formulário Clinica</h1>
+                <br>
+                <!-- Inclua aqui os campos específicos para o formulário de Clínica -->
+                <label for="nameClinica">Nome:</label>
+                <input type="text" id="nameClinica">
+                <br>
+                <label for="address">Endereço:</label>
+                <input type="text" id="address">
+                <br>
+                <!-- Botão para enviar o formulário -->
+                <button class="botao" type="submit" onsubmit="">Concluído</button>
+            </div>
+        </form>
     </section>
 </body>
 
