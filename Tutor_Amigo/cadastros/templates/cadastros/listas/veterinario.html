@@ -44,12 +44,35 @@
                 </ul>
             </nav>
         </header>
-        <div class="content">
-            <div class="text">
-                <h2>Bem-vindo(a) ao Tutor Amigo</h2>
-                <p>Aqui você pode encontrar informações sobre animais de rua e como ajudá-los.</p>
-                <p> Cadastre-se para contribuir na adoção e cuidado desses animais.</p>
-            </div>
+        <h3> Lista de campos registrados </h3>
+        <hr>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <tr>ID</tr>
+                <tr>Nome</tr>
+                <tr>CRMV</tr>
+                <tr>celular</tr>
+                <tr>endereco</tr>
+            </table> 
+            {% for clinica in object_list %}
+            <tr>
+                <td>{{ clinica.pk }}</td>
+                <td>{{ clinica.Nome }}</td>
+                <td>{{ clinica.CRMV }}</td>
+                <td>{{ clinica.celular }}</td>
+                <td>{{ clinica.endereco }}</td>
+                <td>
+                    <a href="" class="btn btn-warming btn-sm" title="Editar">E</a>
+                    <a href="" class="btn btn-danger btn-sm" title="Excluir">X</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">
+                    Nenhum campo registrado
+                </td>
+            </tr>
+            {% endfor %}
         </div>
     </section>
 </body>

@@ -44,13 +44,43 @@
                 </ul>
             </nav>
         </header>
-        <div class="content">
-            <div class="text">
-                <h2>Bem-vindo(a) ao Tutor Amigo</h2>
-                <p>Aqui você pode encontrar informações sobre animais de rua e como ajudá-los.</p>
-                <p> Cadastre-se para contribuir na adoção e cuidado desses animais.</p>
-            </div>
-        </div>
+        <h3> Lista de campos registrados </h3>
+        <hr>
+        <div class="table-responsive">
+            <table class="table">
+                <tr>ID</tr>
+                <tr>CNPJ</tr>
+                <tr>RazaoSocial</tr>
+                <tr>medicoResp</tr>
+                <tr>endereco</tr>
+                <tr>bairro</tr>
+                <tr>estado</tr>
+                <tr>cep</tr>
+                <tr>telefone</tr>
+            </table>
+            {% for clinica in object_list %}
+            <tr>
+                <td>{{ clinica.pk }}</td>
+                <td>{{ clinica.CNPJ }}</td>
+                <td>{{ clinica.RazaoSocial }}</td>
+                <td>{{ clinica.medicoResp }}</td>
+                <td>{{ clinica.endereco }}</td>
+                <td>{{ clinica.bairro }}</td>
+                <td>{{ clinica.estado }}</td>
+                <td>{{ clinica.cep }}</td>
+                <td>{{ clinica.telefone }}</td>
+                <td>
+                    <a href="" class="btn btn-warming btn-sm" title="Editar">E</a>
+                    <a href="" class="btn btn-danger btn-sm" title="Excluir">X</a>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="9">
+                    Nenhum campo registrado
+                </td>
+            </tr>
+            {% endfor %}
     </section>
 </body>
 

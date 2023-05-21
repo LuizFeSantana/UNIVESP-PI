@@ -1,4 +1,5 @@
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.views.generic.list import ListView
 
 from .models import Animais, Usuario, Ongs, Servicos, Veterinario, Clinica, Localizacao, LarDefinitivo, LarTemporario
 
@@ -78,3 +79,21 @@ class VeterinarioDelete(DeleteView):
     model = Veterinario
     template_name = 'cadastros/form-excluir.html'
     success_url = reverse_lazy('index')    
+
+######################## UPDATE ########################
+
+class UsuarioList(ListView):
+    model = Usuario
+    template_name = 'cadastros/listas/tutor.html'
+
+class OngsList(ListView):
+    model = Ongs
+    template_name = 'cadastros/listas/ong.html'
+
+class ClinicaList(ListView):
+    model = Clinica
+    template_name = 'cadastros/listas/clinica.html'
+
+class VeterinarioList(ListView):
+    model = Veterinario
+    template_name = 'cadastros/listas/veterinario.html'  

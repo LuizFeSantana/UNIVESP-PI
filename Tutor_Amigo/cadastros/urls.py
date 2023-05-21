@@ -4,6 +4,7 @@ from django.urls import path
 from .views import UsuarioCreate, OngsCreate, ClinicaCreate, VeterinarioCreate
 from .views import UsuarioUpdate, OngsUpdate, ClinicaUpdate, VeterinarioUpdate
 from .views import UsuarioDelete, OngsDelete, ClinicaDelete, VeterinarioDelete
+from .views import UsuarioList, OngsList, ClinicaList, VeterinarioList
 
 urlpatterns = [
     #path('endereço/', MinhasView.as_view(), name= 'nome da url')
@@ -22,4 +23,10 @@ urlpatterns = [
     path('excluir/ong/<int:pk>/', OngsDelete.as_view(), name= 'excluir-ong'),
     path('excluir/clinica/<int:pk>/', ClinicaDelete.as_view(), name= 'excluir-clinica'),
     path('excluir/veterinario/<int:pk>/', VeterinarioDelete.as_view(), name= 'excluir-veterinario'),
+
+    path('listas/tutor/', UsuarioList.as_view(), name= 'listar-tutor'),
+    path('listas/ong/', OngsList.as_view(), name= 'listar-ong'),
+    path('listas/clinica/', ClinicaList.as_view(), name= 'listar-clinica'),
+    path('listas/veterinario/', VeterinarioList.as_view(), name= 'listar-veterinario'),
+    
 ]
