@@ -159,6 +159,36 @@ select {
     cursor: pointer;
 }
 
+/* Elemento de classe "botao-excluir" */
+.botao-excluir {
+    font-size: 1.2em;
+    background: green;
+    border: 0;
+    margin-bottom: 1em;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+/* Elemento de classe "botao-excluir" com o estado da pseudoclasse "hover" */
+.botao-excluir:hover {
+    background: red;
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: none;
+}
+
+/* Elementos de classe botao-excluir e de tag <select> */
+.botao-excluir,
+select {
+    cursor: pointer;
+}
+
 /*Dropdown*/
 
 .dropdown-menu {

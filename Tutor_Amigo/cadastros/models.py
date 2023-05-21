@@ -4,7 +4,7 @@ from django.db import models
 
 class Animais(models.Model):
     id_animal = models.AutoField(auto_created = True,primary_key = True,serialize = False)
-    nome = models.CharField(max_length=50)
+    Nome = models.CharField(max_length=50)
     especie = models.CharField(max_length=50, verbose_name='Espécie')
     raca = models.CharField(max_length=50, verbose_name='Raça')
     GENERO_CHOICES = (
@@ -34,6 +34,8 @@ class Animais(models.Model):
     idLarTemporario = models.ForeignKey('LarTemporario', on_delete=models.CASCADE)
     idLocalizacao = models.ForeignKey('Localizacao', on_delete=models.CASCADE)
 
+    def _str_(self):
+        return "{} ({})".format(self.Nome, self.especie)
 
 
 
@@ -48,6 +50,9 @@ class Usuario(models.Model):
 
     idAnimal = models.ForeignKey('Animais', on_delete=models.CASCADE)
 
+    def _str_(self):
+        return "{} ({})".format(self.Nome, self.cpf)
+
 
 class Ongs(models.Model):
     idOngs = models.AutoField(auto_created = True,primary_key = True,serialize = False)
@@ -60,6 +65,9 @@ class Ongs(models.Model):
     endereco = models.CharField(max_length=45, verbose_name='Endereço')
 
     idAnimal = models.ForeignKey('Animais', on_delete=models.CASCADE)
+
+    def _str_(self):
+        return "{} - {} ({})".format(self.RazaoSocial, self.resp, self.CNPJ)
 
 class Servicos(models.Model):
     idServicos = models.AutoField(auto_created = True,primary_key = True,serialize = False)
@@ -83,9 +91,12 @@ class Veterinario(models.Model):
 
     idClinica = models.ForeignKey('Clinica', on_delete=models.CASCADE)
 
+    def _str_(self):
+        return "{} ({})".format(self.Nome, self.CRMV)
+
 class Clinica(models.Model):
     idClinica = models.AutoField(auto_created = True,primary_key = True,serialize = False)
-    razaoSocial = models.CharField(max_length=45)
+    RazaoSocial = models.CharField(max_length=45)
     CNPJ = models.CharField(max_length=14)
     medicoResp = models.CharField(max_length=45)
     endereco = models.CharField(max_length=45)
@@ -95,6 +106,9 @@ class Clinica(models.Model):
     estado = models.CharField(max_length=45)
 
     idServicos = models.ForeignKey('Servicos', on_delete=models.CASCADE)
+
+    def _str_(self):
+        return "{} ({})".format(self.RazaoSocial, self.CNPJ)
 
 class Localizacao(models.Model):
     idLocalizacao = models.AutoField(auto_created = True,primary_key = True,serialize = False)

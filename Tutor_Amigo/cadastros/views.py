@@ -1,4 +1,4 @@
-from django.views.generic.edit import CreateView, UpdateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 
 from .models import Animais, Usuario, Ongs, Servicos, Veterinario, Clinica, Localizacao, LarDefinitivo, LarTemporario
 
@@ -56,3 +56,25 @@ class VeterinarioUpdate(UpdateView):
     fields = ['Nome', 'CRMV', 'celular', 'endereco']
     template_name = 'cadastros/form.html'
     success_url = reverse_lazy('index')
+
+    ######################## DELETE ########################
+
+class UsuarioDelete(DeleteView):
+    model = Usuario
+    template_name = 'cadastros/form-excluir.html'
+    success_url = reverse_lazy('index')
+
+class OngsDelete(DeleteView):
+    model = Ongs
+    template_name = 'cadastros/form-excluir.html'
+    success_url = reverse_lazy('index')
+
+class ClinicaDelete(DeleteView):
+    model = Clinica
+    template_name = 'cadastros/form-excluir.html'
+    success_url = reverse_lazy('index')
+
+class VeterinarioDelete(DeleteView):
+    model = Veterinario
+    template_name = 'cadastros/form-excluir.html'
+    success_url = reverse_lazy('index')    
