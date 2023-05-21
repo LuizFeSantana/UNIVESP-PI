@@ -84,7 +84,7 @@ class Servicos(models.Model):
 
 class Veterinario(models.Model):
     id_Veterinario = models.AutoField(auto_created = True,primary_key = True,serialize = False)
-    nome = models.CharField(max_length=45)
+    Nome = models.CharField(max_length=45)
     CRMV = models.IntegerField()
     celular = models.CharField(max_length=45)
     endereco = models.CharField(max_length=45)

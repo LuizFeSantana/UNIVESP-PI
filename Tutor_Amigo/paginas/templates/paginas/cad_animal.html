@@ -8,8 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>Animais Cadastrados - Tutor Amigo</title>
-    <!-- Importar o Bootstrap -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 
 <body>
@@ -30,13 +28,13 @@
                         <a href="#">Cadastre-se</a>
 
                         <div class="dropdown-menu">
-                            <a href="{% url 'tutor' %}">Tutor</a>
+                            <a href="{% url 'cadastro-tutor' %}">Tutor</a>
                             <br>
-                            <a href="{% url 'ong' %}">Ong</a>
+                            <a href="{% url 'cadastro-ong' %}">Ong</a>
                             <br>
-                            <a href="{% url 'clinica' %}">Clínica</a>
+                            <a href="{% url 'cadastro-clinica' %}">Clínica</a>
                             <br>
-                            <a href="{% url 'veterinario' %}">Veterinário</a>
+                            <a href="{% url 'cadastro-veterinario' %}">Veterinário</a>
                         </div>
                     </li>
                     <li><a href="{% url 'login' %}">Login</a>
