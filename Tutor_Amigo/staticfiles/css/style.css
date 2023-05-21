@@ -40,25 +40,25 @@ header .logo {
     top: 10px;
 }
 
-header .Navigation ul {
+.Navigation ul {
     position: relative;
     display: flex;
 }
 
-header .Navigation {
+.Navigation {
     float: right;
 }
 
-header .Navigation li {
+.Navigation li {
     display: inline-block;
     margin-left: 10px;
 }
 
-header .Navigation li:first-child {
+.Navigation li:first-child {
     margin-left: 10px;
 }
 
-header .Navigation li a {
+.Navigation li a {
     display: inline-block;
     color: black;
     font-weight: 500;
@@ -67,8 +67,8 @@ header .Navigation li a {
     margin-left: 10px;
 }
 
-header .Navigation li a:hover {
-    background-color: blue;
+.Navigation li a:hover {
+    background-color: greenyellow;
 }
 
 .content {
@@ -137,8 +137,8 @@ form {
     margin-bottom: 1em;
     color: #ffffff;
     padding: 0.2em 0.6em;
-    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
     position: absolute;
     top: 90%;
     left: 50%;
@@ -149,21 +149,21 @@ form {
 /* Elemento de classe "botao" com o estado da pseudoclasse "hover" */
 .botao:hover {
     background: blue;
-    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    box-shadow: inset 2px 2px 2px rgba(0, 0, 0, 0.2);
     text-shadow: none;
 }
 
 /* Elementos de classe botão e de tag <select> */
-.botao, select{
+.botao,
+select {
     cursor: pointer;
 }
 
 /*Dropdown*/
 
 .dropdown-menu {
-    display: none;
     position: absolute;
-    z-index: 1;
+    display: none;
 }
 
 .dropdown-menu a {

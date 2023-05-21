@@ -16,20 +16,29 @@
             <a href="{%url 'inicio' %}"><img src="{% static 'images/logo.png' %}" alt="logo" class="logo"></a>
             <nav class="Navigation">
                 <ul>
-                    <li><a href="{% url 'inicio' %}">Página Inicial</a></li>
-                    <li><a href="{% url 'cad_animal' %}">Animais Cadastrados</a></li>
-                    <li><a href="{% url 'parceiros' %}">Parceiros</a></li>
-                    <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                    <li><a href="{% url 'inicio' %}">Página Inicial</a>
+                    </li>
+                    <li><a href="{% url 'cad_animal' %}">Animais Cadastrados</a>
+                    </li>
+                    <li><a href="{% url 'parceiros' %}">Parceiros</a>
+                    </li>
+                    <li><a href="{% url 'sobre' %}">Sobre</a>
+                    </li>
                     <li class="dropdown">
                         <a href="#">Cadastre-se</a>
-                        <ul class="dropdown-menu">
-                            <li><a href="{% url 'tutor' %}">Tutor</a></li>
-                            <li><a href="{% url 'ong' %}">Ong</a></li>
-                            <li><a href="{% url 'clinica' %}">Clínica</a></li>
-                            <li><a href="{% url 'veterinario' %}">Veterinário</a></li>
-                        </ul>
+
+                        <div class="dropdown-menu">
+                            <a href="{% url 'tutor' %}">Tutor</a>
+                            <br>
+                            <a href="{% url 'ong' %}">Ong</a>
+                            <br>
+                            <a href="{% url 'clinica' %}">Clínica</a>
+                            <br>
+                            <a href="{% url 'veterinario' %}">Veterinário</a>
+                        </div>
                     </li>
-                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'login' %}">Login</a>
+                    </li>
                 </ul>
             </nav>
         </header>
