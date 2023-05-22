@@ -61,7 +61,7 @@ class Ongs(models.Model):
     resp = models.CharField(max_length=45)
     telefone = models.CharField(max_length=45)
     cep = models.CharField(max_length=45)
-    CNPJ = models.CharField(max_length=45)
+    cnpj = models.CharField(max_length=45)
     endereco = models.CharField(max_length=45, verbose_name='Endereço')
 
     idAnimal = models.OneToOneField('Animal', on_delete=models.CASCADE)
