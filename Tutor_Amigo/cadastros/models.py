@@ -58,10 +58,10 @@ class Ongs(models.Model):
     idOngs = models.AutoField(auto_created = True,primary_key = True,serialize = False)
     razaosocial = models.CharField(max_length=45, verbose_name='Razão Social')
     email = models.CharField(max_length=45)
-    resp = models.CharField(max_length=45)
-    telefone = models.CharField(max_length=45)
-    cep = models.CharField(max_length=45)
-    cnpj = models.CharField(max_length=45)
+    resp = models.CharField(max_length=45,  verbose_name='Responsável')
+    telefone = models.CharField(max_length=45, verbose_name='Telefone')
+    cep = models.CharField(max_length=45, verbose_name='CEP')
+    cnpj = models.CharField(max_length=45, verbose_name='CNPJ')
     endereco = models.CharField(max_length=45, verbose_name='Endereço')
 
     idAnimal = models.OneToOneField('Animal', on_delete=models.CASCADE)
@@ -84,10 +84,10 @@ class Servicos(models.Model):
 
 class Veterinario(models.Model):
     idVeterinario = models.AutoField(auto_created = True,primary_key = True,serialize = False)
-    nome = models.CharField(max_length=45)
-    crmv = models.IntegerField()
-    celular = models.CharField(max_length=45)
-    endereco = models.CharField(max_length=45)
+    nome = models.CharField(max_length=45, verbose_name='Nome')
+    crmv = models.IntegerField(verbose_name='CRMV')
+    celular = models.CharField(max_length=45, verbose_name='Celular')
+    endereco = models.CharField(max_length=45, verbose_name='Endereço')
 
     idClinica = models.OneToOneField('Clinica', on_delete=models.CASCADE)
 
@@ -96,14 +96,14 @@ class Veterinario(models.Model):
 
 class Clinica(models.Model):
     idClinica = models.AutoField(auto_created = True,primary_key = True,serialize = False)
-    razaosocial = models.CharField(max_length=45)
-    cnpj = models.CharField(max_length=14)
-    medicoresp = models.CharField(max_length=45)
-    endereco = models.CharField(max_length=45)
-    bairro = models.CharField(max_length=45)
-    telefone = models.CharField(max_length=45)
-    cep = models.CharField(max_length=45)
-    estado = models.CharField(max_length=45)
+    razaosocial = models.CharField(max_length=45, verbose_name='Razão Social')
+    cnpj = models.CharField(max_length=14, verbose_name='CNPJ')
+    medicoresp = models.CharField(max_length=45, verbose_name='Médico Responsável')
+    endereco = models.CharField(max_length=45, verbose_name='Endereço')
+    bairro = models.CharField(max_length=45, verbose_name='Bairro')
+    telefone = models.CharField(max_length=45, verbose_name='Telefone')
+    cep = models.CharField(max_length=45, verbose_name='CEP')
+    estado = models.CharField(max_length=45, verbose_name='Estado')
 
     idServicos = models.OneToOneField('Servicos', on_delete=models.CASCADE)
 
