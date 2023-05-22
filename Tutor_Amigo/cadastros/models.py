@@ -35,7 +35,7 @@ class Animal(models.Model):
     idLocalizacao = models.ForeignKey('Localizacao', on_delete=models.CASCADE)
 
     def _str_(self):
-        return "{} ({})".format(self.Nome, self.especie)
+        return "{} ({})".format(self.nome, self.especie)
 
 
 
@@ -51,7 +51,7 @@ class Usuario(models.Model):
     idAnimal = models.OneToOneField('Animal', on_delete=models.CASCADE)
 
     def _str_(self):
-        return "{} ({})".format(self.Nome, self.cpf)
+        return "{} ({})".format(self.nome, self.cpf)
 
 
 class Ongs(models.Model):
@@ -67,7 +67,7 @@ class Ongs(models.Model):
     idAnimal = models.OneToOneField('Animal', on_delete=models.CASCADE)
 
     def _str_(self):
-        return "{} - {} ({})".format(self.RazaoSocial, self.resp, self.CNPJ)
+        return "{} - {} ({})".format(self.razaosocial, self.resp, self.cnpj)
 
 class Servicos(models.Model):
     idServicos = models.AutoField(auto_created = True,primary_key = True,serialize = False)
@@ -92,7 +92,7 @@ class Veterinario(models.Model):
     idClinica = models.OneToOneField('Clinica', on_delete=models.CASCADE)
 
     def _str_(self):
-        return "{} ({})".format(self.Nome, self.CRMV)
+        return "{} ({})".format(self.Nome, self.crmv)
 
 class Clinica(models.Model):
     idClinica = models.AutoField(auto_created = True,primary_key = True,serialize = False)
@@ -108,7 +108,7 @@ class Clinica(models.Model):
     idServicos = models.OneToOneField('Servicos', on_delete=models.CASCADE)
 
     def _str_(self):
-        return "{} ({})".format(self.RazaoSocial, self.CNPJ)
+        return "{} ({})".format(self.razaosocial, self.cnpj)
 
 class Localizacao(models.Model):
     idLocalizacao = models.AutoField(auto_created = True,primary_key = True,serialize = False)
